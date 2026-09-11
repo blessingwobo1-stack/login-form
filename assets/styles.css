@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(./Wallpaper\ 4K\ Nature\ Pack\ Ideas.jpg) no-repeat;
+    background: url(/assets/Wallpaper\ 4K\ Nature\ Pack\ Ideas.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
