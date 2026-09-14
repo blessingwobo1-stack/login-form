@@ -51,10 +51,39 @@ body {
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .input-box input::placeholder {
     color: #fff;
+}
+
+.input-box input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+
+.input-box input:focus ~ i {
+    color: #6c63ff;
+}
+
+/* Validation styles — only apply after user has typed (not just placeholder shown) */
+.input-box input:not(:placeholder-shown):invalid {
+    border-color: #ff4757;
+    box-shadow: 0 0 8px rgba(255, 71, 87, 0.4);
+}
+
+.input-box input:not(:placeholder-shown):invalid ~ i {
+    color: #ff4757;
+}
+
+.input-box input:not(:placeholder-shown):valid {
+    border-color: #2ed573;
+    box-shadow: 0 0 8px rgba(46, 213, 115, 0.4);
+}
+
+.input-box input:not(:placeholder-shown):valid ~ i {
+    color: #2ed573;
 }
 
 .input-box i {
@@ -63,6 +92,7 @@ body {
     top: 30%;
     transform: translate(-50%);
     font-size: 20px;
+    transition: color 0.3s ease;
 }
 
 .wrapper .remember-forgot {
